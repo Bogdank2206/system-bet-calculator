@@ -1,6 +1,6 @@
 import React, {useEffect} from "react";
 import {useDispatch, useSelector} from "react-redux";
-import {increaseWinnings} from "../../State/WinningsReducer";
+import {increaseWinnings} from "../../../State/WinningsReducer";
 
 const Item = ({num, comb}) => {
     const odds = useSelector((state) => (
@@ -50,8 +50,8 @@ const Item = ({num, comb}) => {
                     )
                 })
             }
-            <td>{oddsCoef.toFixed(2)}</td>
-            <td>{winning.toFixed(2)}</td>
+            <td><span data-testid={'oddsCoef'}>{oddsCoef.toFixed(2)}</span></td>
+            <td><span data-testid={'winning'}>{winning.toFixed(2)}</span></td>
         </tr>
     )
 }

@@ -1,5 +1,5 @@
 import {useSelector} from "react-redux";
-import Item from "../Item";
+import Item from "./Item";
 import React from "react";
 
 const combinations = (array, k) => {
@@ -28,7 +28,7 @@ const Table = () => {
         length: max,
     }, (_, idx) => (idx)), min);
     return (
-        <table style={{width: '90%', margin: '0 auto', borderCollapse: 'separate', borderSpacing: '10px'}}>
+        <table style={{width: '95%', margin: '0 auto', borderCollapse: 'separate', borderSpacing: '0'}}>
             <thead>
             <tr>
                 <td><b>Num</b></td>

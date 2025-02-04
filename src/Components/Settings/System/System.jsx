@@ -7,12 +7,12 @@ const System = ({setShowTable}) => {
     const {min, max} = useSelector((state) => state.settings.borders, shallowEqual);
     const dispatch = useDispatch();
 
-    const variants = Array.from({length: 20 + 1}, (_, max) => {
+    const variants = Array.from({length: 16 + 1}, (_, max) => {
         if (max >= 3) {
             return Array.from({length: max}, (_, min) => {
                 if (min >= 2) {
                     return (
-                        <MenuItem key={(max - 3) * 20 + min} value={`${min};${max}`}>
+                        <MenuItem key={(max - 3) * 16 + min} value={`${min};${max}`}>
                             {`${min} from ${max}`}
                         </MenuItem>
                     )
@@ -34,6 +34,7 @@ const System = ({setShowTable}) => {
             <FormControl fullWidth sx={{margin: '0 auto 25px'}}>
                 <InputLabel>System</InputLabel>
                 <Select
+                    data-testid="selectSystem"
                     variant={'standard'}
                     value={`${min};${max}`}
                     onChange={onChange}

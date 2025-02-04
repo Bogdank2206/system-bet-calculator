@@ -8,15 +8,19 @@ import {Button} from "@mui/material";
 import {resetWinnings} from "../../State/WinningsReducer";
 import {useDispatch} from "react-redux";
 
-const Settings = ({setShowTable}) => {
+const Settings = ({setShowTable, ...props}) => {
     const dispatch = useDispatch();
     const onClick = () => {
-        dispatch(resetWinnings());
-        setShowTable(true);
+        if (props.onClick) {
+            props.onClick();
+        } else {
+            dispatch(resetWinnings());
+            setShowTable(true);
+        }
     }
     return (
         <div>
-            <h2>Select conditions</h2>
+            <h2 style={{color: 'white'}}>Select conditions</h2>
             <div className={s.settings}>
                 <div className={classNames(s.system, s.container)}>
                     <System setShowTable={setShowTable}/>

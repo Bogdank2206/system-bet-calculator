@@ -13,15 +13,21 @@
 
 .system {
     grid-area: system;
+    max-height: 150px;
+    width: 100%;
+    margin: auto;
+}
+
+.info {
+    grid-area: info;
+    max-height: 150px;
+    width: 100%;
 }
 
 .odds {
     grid-area: odds;
 }
 
-.info {
-    grid-area: info;
-}
 
 .button {
     width: 100%;

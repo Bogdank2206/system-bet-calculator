@@ -17,8 +17,8 @@ const initialState = {
     },
     odds: [
         {status: STATUS.CORRECT, coefficient: 2.00},
-        {status: STATUS.VOID, coefficient: 2.00},
-        {status: STATUS.INCORRECT, coefficient: 2.00},
+        {status: STATUS.CORRECT, coefficient: 2.00},
+        {status: STATUS.CORRECT, coefficient: 2.00},
     ],
 };
 

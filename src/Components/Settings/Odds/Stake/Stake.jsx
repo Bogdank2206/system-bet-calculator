@@ -4,13 +4,17 @@ import {Box, Grid2, TextField} from "@mui/material";
 import s from './Stake.module.css'
 import {setTotalStake} from "../../../../State/SettingsReducer";
 
-const Stake = () => {
+const Stake = (props) => {
     const totalStake = useSelector(state => state.settings.totalStake, shallowEqual);
     const dispatch = useDispatch();
 
     const onChange = (e) => {
-        const value = Number(e.target.value);
-        dispatch(setTotalStake(Math.min(10 ** 6, value)));
+        let value = Number(e.target.value);
+        value = Math.min(10 ** 6, value);
+        if (props.onChange) {
+            props.onChange(value)
+        }
+        dispatch(setTotalStake(value));
     }
 
     return (
