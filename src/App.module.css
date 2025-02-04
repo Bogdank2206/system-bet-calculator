@@ -1,0 +1,8 @@
+.app {
+    margin: 0 auto;
+    text-align: center;
+    background-color: #1d2b6a;
+    min-height: 100vh;
+    width: 80%;
+    min-width: 480px;
+}

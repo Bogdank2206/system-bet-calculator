@@ -1,0 +1,12 @@
+.calculateProfit {
+    margin: 0 5%;
+    padding: 1%;
+    background-color: #fff;
+    border-radius: 50px / 25px;
+}
+
+.results {
+    padding: 1% 5%;
+    font-size: 1.25em;
+    text-align: start;
+}
